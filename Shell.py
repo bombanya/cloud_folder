@@ -9,7 +9,7 @@ import csv, socket
 from PyQt5.QtGui import (QPixmap,
                          QIcon,
                          QMovie)
-from PyQt5.QtCore import (QSize, QTimer, Qt, pyqtSignal)
+from PyQt5.QtCore import (QSize, QTimer, Qt)
 from PyQt5.Qt import QEvent
 from PyQt5.QtWidgets import (QLabel,
                              QVBoxLayout,
@@ -105,8 +105,8 @@ class Shell(QMainWindow):
 
         self.setMinimumSize(300, 300)
 
-        self.host = 'localhost'
-        self.port = 60000
+        self.host = '91.143.169.244'
+        self.port = 60001
         self.connectionStatus = False
 
         self.signIn()

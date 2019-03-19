@@ -8,8 +8,7 @@ Created on Tue Mar 12 19:20:42 2019
 import csv, os
 from PyQt5.QtGui import (QPixmap,
                          QIcon)
-from PyQt5.QtCore import (Qt,
-                          pyqtSignal)
+from PyQt5.QtCore import (Qt)
 from PyQt5.QtWidgets import (QHBoxLayout,
                              QTreeWidget,
                              QTreeWidgetItem,

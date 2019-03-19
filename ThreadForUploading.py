@@ -1,4 +1,4 @@
-import socket, time, os
+import socket, os
 from PyQt5.QtCore import (QThread,
                           pyqtSignal)
 
