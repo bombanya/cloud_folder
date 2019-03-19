@@ -500,10 +500,13 @@ class Shell(QMainWindow):
 
     def closeEvent(self, event):
         if len(self.main_widget.ListOfDowloads) != 0:
-            areYouShure = QMessageBox()
-            #areYouShure.setIcon(QMessageBox.Icon=QIcon('Icons//HirosavaYuri.jpg'))
-            areYouShure.setText('You have unfinished deals...')
-            areYouShure.setDefaultButton(QMessageBox.StandardButtons(QMessageBox.Ok))
+            reply = QMessageBox.question(self, "Warning!",
+                                         "You have unfinished deals...", QMessageBox.Ok)
+            if reply == QMessageBox.Ok:
+                event.ignore()
+            else:
+                pass #try
+            
         else:
             self.client = socket.socket()
             self.client.connect((self.host, self.port))
